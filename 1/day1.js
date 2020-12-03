@@ -6,10 +6,6 @@ fs.readFile('./1/day1data.txt', 'utf8', (err, data) => {
         return
     }
     const lines = data.split(/\r?\n/)
-    //console.log(data)
-    //lines.forEach((line) => {
-    //    console.log(line)
-    //})
 
     var tempAdd = 0
     for(i=0; i < lines.length; i++) {
