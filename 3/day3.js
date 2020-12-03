@@ -7,21 +7,21 @@ const maplengthY = map.length
 
 console.log("Map Length: [X]" + maplengthX + " [Y]" + maplengthY)
 
-function MapPath (plotX, plotY) {
-    var treehit = 0
-    var currentX = plotX
-    for (i=plotY;i<maplengthY;i = i + plotY) {
-        if ((map[i])[currentX] == '#') {
-            treehit ++
+function MapPath(plotX, plotY) {
+    let treehit = 0
+    let currentX = plotX
+    for (i = plotY; i < maplengthY; i = i + plotY) {
+        if (map[i][currentX] == '#') {
+            treehit++
         }
-        currentX = (currentX + plotX)%maplengthX
+        currentX = (currentX + plotX) % maplengthX
     }
     return treehit
 }
 
-console.log("Trees Hit:", MapPath(3,1))
+console.log("Trees Hit:", MapPath(3, 1))
 
-var ThisIsPain = MapPath(1,1) * MapPath(3,1) * MapPath(5,1) * MapPath(7,1) * MapPath(1,2)
+let ThisIsPain = MapPath(1, 1) * MapPath(3, 1) * MapPath(5, 1) * MapPath(7, 1) * MapPath(1, 2)
 
 console.log("TreeHitHash", ThisIsPain)
 
